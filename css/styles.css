@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1b0711;
+    color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #26121b;
+    color: #d3d3d3;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 4px solid #87797f;  
+    font-family: 'Georgia', sans-serif;
+}
+
+/* Main page & hero. */
+
+.hero {
+    flex-grow: 1;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/herobg2.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    object-fit: cover; 
+    max-width: none;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: center;
+    margin: 2rem;
+}
+
+.hero-content p {
+    margin-bottom: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #d3d3d3;
+    margin-bottom: 2rem;
+}
+
+.general-button {
+    background-color: #9b4a64;
+    color: #ffffff;
+    padding: 0.75em 2em;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.general-button:hover {
+    background-color: #711d46;
+}
+
+footer {
+    background-color: #26121b;
+    color: #d3d3d3;
+    padding: 1rem;
+    text-align: center;
+    border-top: 4px solid #87797f;
+    font-size: 0.8rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #9a9a9a;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Character portion. */
+
+.characters-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 40px 20px;
+    padding: 2rem;  
+    grid-auto-rows: min-content;
+}
+
+.character {
+    flex: 1 1 150px;
+    max-width: 150px;
+    text-align: center;
+    height: auto;
+    align-self: start;
+}
+
+.character img {
+    width: 100px;
+    border-radius: 8px;
+}
+
+.character p {
+    margin: 0.5em 0 0;
+    color: #d3d3d3;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.character a {
+    text-decoration: none;
+}
+
+.character {
+    background-color: #26121b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+}
+
+.character:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.sidebar {
+    background-color: #87797f;
+    width: 200px;
+    padding: 1rem;
+    color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.left-sidebar {
+    margin-right: 2rem;
+}
+
+.right-sidebar {
+    margin-left: 2rem;
+}
+
+#back-button {
+    background-color: #26121b;
+    width: 100%;
+    text-align: center;
+}
+
+#back-button:hover {
+    background-color: #711d46;
+}
+
+.right-sidebar p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.right-sidebar .filter-section {
+    width: 100%;
+    text-align: center;
+    background-color: #26121b;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.right-sidebar .filter-section p {
+    color: #d3d3d3;
+    text-align: center;
+    margin: 0;
+}
+
+.right-sidebar .filter-option {
+    background-color: #87797f;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Profile section. */
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #26121b;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.profile-card img {
+    width: 150px;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+}
+
+.profile-card a {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.profile-details h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.segment {
+    background-color: #26121b;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.action-buttons {
+    margin-top: 1rem;
+    gap: 10px;
+}
+
+/* RWD. */
+
+@media (max-width: 1536px) {
+    .characters-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+  
+@media (max-width: 1024px) {
+    .characters-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .characters-container {
+        grid-template-columns: 1fr;
+    }
+}
